@@ -1,46 +1,27 @@
 chrome.browserAction.onClicked.addListener(function(tab) {
     chrome.tabs.executeScript({
-        code:`
+        code: `
       var elems = document.getElementsByTagName("body");
-      var switchto = prompt("Change My Cursor says... what URL should we use? (Leaving an invalid URL OR ONE THAT IS LARGER THAN 32x32px will switch your cursor to default.)");
+      var switchto = prompt("Pick a new cursor! You can enter the URL for any image you'd like, or enter a number 1 thru 5 for a pre-set option.");
   if(switchto == null || switchto == "" || switchto == " "){
-    alert("Change My Cursor says...No URL specified, using a pre-chosen image.");
-    switchto = "images/pointer1.jpg";
+    alert("No URL specified, using a pre-chosen image...");
+    switchto = "https://i.postimg.cc/x1PCtfQZ/pointer1.jpg";
+  } else if (switchto == 1) {
+    switchto = "https://i.postimg.cc/tRZCxdM7/Webp-net-resizeimage.jpg";
+  } else if (switchto == 2) {
+    switchto = "https://i.postimg.cc/RZfzXDK1/download.png";
+  } else if (switchto == 3) {
+    switchto = "https://i.postimg.cc/RFhsbW2r/download.jpg"
+  } else if (switchto == 4) {
+    switchto = "https://i.postimg.cc/RhNmQmRj/dogeimage.jpg"
+  } else if (switchto == 5) {
+    switchto = "https://i.postimg.cc/fyT9vdPX/squid-game-soldier-circle-cartoon-chibi-character-31633098539bva76naymm.png"
   }
       for(var i = 0; i < elems.length; i++){
         elems[i].style.cursor = "url(" + switchto + "), default";
         elems[i].style.zIndex = "99999";
-       alert("we changed, " + elems[i].innerHTML);
+       alert("Enjoy your new cursor :)");
       }
       `
      });
    });
-
-
-
-// chrome.runtime.onInstalled.addListener(() => {
-//     chrome.storage.sync.set
-// })
-
-// let mouseCursor = document.querySelector("#cursor")
-// //let pointImg = document.querySelectorAll("pointer")
-// // const cursorImage = document.createElement('img');
-// // img.src = 'images/pointer1.jpg';
-// // document.getElementById('cursor').appendChild(cursorImage);
-
-// window.addEventListener('mousemove', function(event) {
-//     document.getElementById("cursor").style.left = `${event.pageX}px`;
-//     document.getElementById("cursor").style.top = `${event.pageY}px`;
-// })
-
-// const pointerClick = document.getElementById("pointer-1")
-// //const cursor = document.body.style.cursor;
-
-// pointerClick.addEventListener("click", function(){
-//     document.body.style.cursor = "pointer-1"
-//     pointerClick.style.cursor = "help"
-// })
-
-// function changeCursor() {
-//     pointerClick.style.cursor = "help"
-// }
