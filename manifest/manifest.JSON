@@ -15,6 +15,5 @@
     ],
     "browser_action": {
       "default_title": "Change Your Cursor",
-      "default_icon": "images/pointer2.jpg"
   }
 }
