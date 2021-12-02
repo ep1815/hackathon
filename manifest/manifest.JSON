@@ -1,0 +1,20 @@
+{
+    "name": "Cursor Styler",
+    "description": "Cursor Styling!",
+    "version": "1.0",
+    "manifest_version": "1.0",
+    "background": {
+      "scripts": [
+        "main.js"
+      ],
+      "persistent": false
+    },
+    "permissions": [
+      "activeTab",
+      "tabs"
+    ],
+    "browser_action": {
+      "default_title": "Change Your Cursor",
+      "default_icon": "images/pointer2.jpg"
+  }
+}

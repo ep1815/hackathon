@@ -1,0 +1,31 @@
+/* .body {
+    cursor: url('images/pointer1.jpg'), auto;
+} */
+
+.pointer {
+    width: 50px;
+    height: 50px;
+}
+
+
+
+.h1 {
+    size: 25px;
+    color: red;
+    
+}
+
+.description {
+    text-align: center;
+    font-family: cursive;
+}
+
+#cursor {
+    background-image: url('images/pointer1.jpg');
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border: 2px dotted black;
+    border-radius: 50%;
+    opacity: 1;
+}
